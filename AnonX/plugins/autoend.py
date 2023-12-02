@@ -13,7 +13,7 @@ AUTOEND_COMMAND = get_command("AUTOEND_COMMAND")
 
 @app.on_message(filters.command(AUTOEND_COMMAND) & SUDOERS)
 async def auto_end_stream(client, message):
-    usage = "**ᴜsᴀɢᴇ:**\n\n/autoend [enable|disable]"
+    usage = "**الاستخدام:**\n\n/autoend [enable|disable]"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     state = message.text.split(None, 1)[1].strip()
@@ -21,10 +21,10 @@ async def auto_end_stream(client, message):
     if state == "enable":
         await autoend_on()
         await message.reply_text(
-            "ᴀᴜᴛᴏ ᴇɴᴅ sᴛʀᴇᴀᴍ ᴇɴᴀʙʟᴇᴅ.\n\nᴀssɪsᴛᴀɴᴛ ᴡɪʟʟ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ʟᴇᴀᴠᴇ ᴛʜᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛ ᴀғᴛᴇʀ ғᴇᴡ ᴍɪɴs ᴡʜᴇɴ ɴᴏ ᴏɴᴇ ɪs ʟɪsᴛᴇɴɪɴɢ ᴡɪᴛʜ ᴀ ᴡᴀʀɴɪɴɢ ᴍᴇssᴀɢᴇ."
+            "تم تمكين الدفق النهائي التلقائي .\n\nسيغادر المساعد محادثة الفيديو تلقائيًا بعد بضع دقائق عندما لا يستمع أحد مع رسالة تحذير."
         )
     elif state == "disable":
         await autoend_off()
-        await message.reply_text("ᴀᴜᴛᴏ ᴇɴᴅ sᴛʀᴇᴀᴍ ᴅɪsᴀʙʟᴇᴅ.")
+        await message.reply_text("تم تعطيل تيار النهاية التلقائي")
     else:
         await message.reply_text(usage)
