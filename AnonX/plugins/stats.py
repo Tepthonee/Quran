@@ -37,7 +37,7 @@ STATS_COMMAND = get_command("STATS_COMMAND")
 
 
 @app.on_message(
-    filters.command(STATS_COMMAND)
+    filters.command(STATS_COMMAND,"")
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
@@ -55,7 +55,7 @@ async def stats_global(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(GSTATS_COMMAND)
+    filters.command(GSTATS_COMMAND,"")
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
