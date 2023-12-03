@@ -9,9 +9,9 @@ from AnonX.utils.database import add_gban_user, remove_gban_user
 from AnonX.utils.decorators.language import language
 
 # Command
-BLOCK_COMMAND = get_command("BLOCK_COMMAND)
-UNBLOCK_COMMAND = get_command("UNBLOCK_COMMAND)
-BLOCKED_COMMAND = get_command("BLOCKED_COMMAND)
+BLOCK_COMMAND = get_command("BLOCK_COMMAND")
+UNBLOCK_COMMAND = get_command("UNBLOCK_COMMAND")
+BLOCKED_COMMAND = get_command("BLOCKED_COMMAND")
 
 
 @app.on_message(filters.command(BLOCK_COMMAND,"") & SUDOERS)
