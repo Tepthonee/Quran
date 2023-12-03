@@ -1,10 +1,23 @@
+#
+# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
+#
+# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
+#
+# All rights reserved.
+
 import os
+import sys
 from typing import List
 
 import yaml
 
 languages = {}
 commands = {}
+
+
+languages_present = {}
 
 
 def get_command(value: str) -> List:
@@ -28,6 +41,7 @@ for filename in os.listdir(r"./strings/langs/"):
         languages["ar"] = yaml.safe_load(
             open(r"./strings/langs/ar.yml", encoding="utf8")
         )
+        languages_present["ar"] = languages["ar"]["name"]
     if filename.endswith(".yml"):
         language_name = filename[:-4]
         if language_name == "ar":
@@ -38,3 +52,12 @@ for filename in os.listdir(r"./strings/langs/"):
         for item in languages["ar"]:
             if item not in languages[language_name]:
                 languages[language_name][item] = languages["ar"][item]
+    try:
+        languages_present[language_name] = languages[language_name][
+            "name"
+        ]
+    except:
+        print(
+            "There is some issue with the language file inside bot. Please report it to the TeamYukki at @YukkiSupport on Telegram"
+        )
+        sys.exit()
