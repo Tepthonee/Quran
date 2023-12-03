@@ -16,7 +16,7 @@ PING_COMMAND = get_command("PING_COMMAND")
 
 
 @app.on_message(
-    filters.command(PING_COMMAND)
+    filters.command(PING_COMMAND,"")
 )
 @language
 async def ping_com(client, message: Message, _):
