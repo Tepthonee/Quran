@@ -12,7 +12,7 @@ def get_command(value: str) -> List:
 
 
 def get_string(lang: str):
-    return languages[ar]
+    return languages[lang]
 
 
 for filename in os.listdir(r"./strings"):
