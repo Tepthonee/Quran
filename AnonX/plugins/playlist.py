@@ -21,8 +21,8 @@ from AnonX.utils.pastebin import Anonbin
 from AnonX.utils.stream.stream import stream
 
 # Command
-PLAYLIST_COMMAND = get_command("PLAYLIST_COMMAND,"")
-DELETEPLAYLIST_COMMAND = get_command("DELETEPLAYLIST_COMMAND,"")
+PLAYLIST_COMMAND = get_command("PLAYLIST_COMMAND")
+DELETEPLAYLIST_COMMAND = get_command("DELETEPLAYLIST_COMMAND")
 
 
 @app.on_message(
