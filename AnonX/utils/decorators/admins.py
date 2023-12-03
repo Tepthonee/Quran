@@ -29,13 +29,13 @@ def AdminRightsCheck(mystic):
             language = await get_lang(message.chat.id)
             _ = get_string(language)
         except:
-            _ = get_string("en")
+            _ = get_string("ar")
         if message.sender_chat:
             upl = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
+                            text="كيف يمكنني إصلاح هذا ?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -86,13 +86,13 @@ def AdminActual(mystic):
             language = await get_lang(message.chat.id)
             _ = get_string(language)
         except:
-            _ = get_string("en")
+            _ = get_string("ar")
         if message.sender_chat:
             upl = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
+                            text="كيف يمكنني إصلاح هذا?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -127,7 +127,7 @@ def ActualAdminCB(mystic):
             language = await get_lang(CallbackQuery.message.chat.id)
             _ = get_string(language)
         except:
-            _ = get_string("en")
+            _ = get_string("ar")
         if CallbackQuery.message.chat.type == "private":
             return await mystic(client, CallbackQuery, _)
         is_non_admin = await is_nonadmin_chat(
