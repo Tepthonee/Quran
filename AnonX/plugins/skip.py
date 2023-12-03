@@ -16,11 +16,11 @@ from AnonX.utils.stream.autoclear import auto_clean
 from AnonX.utils.thumbnails import gen_thumb
 
 # Commands
-SKIP_COMMAND = get_command("SKIP_COMMAND,"")
+SKIP_COMMAND = get_command("SKIP_COMMAND")
 
 
 @app.on_message(
-    filters.command(SKIP_COMMAND)
+    filters.command(SKIP_COMMAND,"")
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
