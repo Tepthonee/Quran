@@ -11,7 +11,7 @@ from AnonX.utils.decorators.language import language
 LOGGER_COMMAND = get_command("LOGGER_COMMAND")
 
 
-@app.on_message(filters.command(LOGGER_COMMAND) & SUDOERS)
+@app.on_message(filters.command(LOGGER_COMMAND,"") & SUDOERS)
 @language
 async def logger(client, message, _):
     usage = _["log_1"]
