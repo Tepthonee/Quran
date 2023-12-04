@@ -82,7 +82,7 @@ installation(){
 }
 
 clear
-pprint "Welcome to AnonXMusic Setup Installer\n\n"
+pprint "أهلًا بك في سورس إذاعة القرآن الكريم\n\n"
 pprint "If you see any error during Installation Process, Please refer to these files for logs: "
 pprint "\nFor node js errors , Checkout nodelog.txt"
 pprint "\nFor pypi packages errors , Checkout pypilog.txt"
@@ -94,11 +94,11 @@ update
 packages
 node
 installation
-pprint "\n\n\n\n\nAnonX Music Installation Completed !" "cgreen"
+pprint "\n\n\n\n\nتم تنصيب سورس القرآن الكريم لا تنسى الدعاء لنا!" "cgreen"
 sleep 1
 clear
 
-pprint "\nEnter Your Values Below\n\n\n"
+pprint "\nأرسل المتغيرات الآتية\n\n\n"
 pprint "API ID: "; color_reset; read api_id
 pprint "\nAPI HASH: "; color_reset; read api_hash
 pprint "\nBOT TOKEN: "; color_reset; read bot_token
@@ -124,5 +124,5 @@ STRING_SESSION = $string_session
 OWNER_ID = $ownid""" > .env
 clear
 
-pprint "\n\n\nThanks for using AnonX Music installer, your vars have been saved successfully ! \nIf you wanna add more variables add them in your env by : vi .env"
+pprint "\n\n\nشكرًا لاستخدام سورس إذاعة القرآن الكريم, your vars have been saved successfully ! \nIf you wanna add more variables add them in your env by : vi .env"
 pprint "\n\nNow you can start the bot by : bash start\n\n"
